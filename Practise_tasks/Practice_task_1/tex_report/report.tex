@@ -18,9 +18,16 @@
 \usepackage{epsfig}
 \usepackage{newunicodechar}
 
+\usepackage{xcolor}
+\usepackage{hyperref}
 
 \usepackage{listings}
 \usepackage{color}
+ % Цвета для гиперссылок
+\definecolor{linkcolor}{HTML}{799B03} % цвет ссылок
+\definecolor{urlcolor}{HTML}{799B03} % цвет гиперссылок
+ 
+\hypersetup{pdfstartview=FitH,  linkcolor=linkcolor,urlcolor=urlcolor, colorlinks=true}
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
@@ -54,7 +61,7 @@
 	\vspace{5cm}
 	{\scshape\Large  Учебное практическое задание № 1 \par}
 	\vspace{1cm}
-    {\huge\bfseries  Задание 1. Объектно-ориентированно епрограммиорвание в Java \par}
+    {\huge\bfseries  Задание 1. Объектно-ориентированное программиорвание в Java \par}
 	\vspace{1cm}
 	\vfill
     \begin{flushright}
@@ -77,7 +84,8 @@
 \newpage
 
 
-Код лежит на GitHub: 
+Код лежит на \href{https://github.com/yarvod/NetCracker_LearningCenter/tree/main/Practise_tasks/Practice_task_1}{GitHub}.
+
 \section{Задача 1}
 
 \textbf{Цель:} Разработайте класс для решения квадратных уравнений. Вычисление дискриминанта должен осуществлять вложенный класс. После компиляции объясните структуру class файлов. Проанализируйте использование вложенного класса. \par
