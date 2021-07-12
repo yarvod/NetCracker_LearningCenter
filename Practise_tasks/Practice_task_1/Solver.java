@@ -1,8 +1,6 @@
 import java.util.Scanner;
 
-
 public class Solver {
-
 
     class Discr {
 
@@ -19,7 +17,6 @@ public class Solver {
         }
         return res;
     }
-
 
     public static void main(String[] args) {
 
@@ -45,29 +42,25 @@ public class Solver {
         double discriminante = discr.discr_calc(a, b, c);
 
         if (a == 0 && b == 0 && c == 0) {
-        System.out.println("Infinity amount of solutions!");
+        System.out.println("The Answer: Infinity amount of solutions!");
 
         } else {
             if (discriminante < 0) {
-                System.out.println("No solution in Real numbers!");
+                System.out.println("The Answer: No solution in Real numbers!");
             } else {
                 if (a == 0) {
                     double answer_linear = -c / b;
                     System.out.println("The Answer: " + answer_linear);
     
                 } if (a == 0 && b == 0 && c != 0) {
-                    System.out.println("No solution");
+                    System.out.println("The Answer: No solution");
     
-                } else {
+                } if (a != 0) {
                 answer = answer(a, b, discriminante);
-                System.out.println("The Answers: " + answer[0] + " and " + answer[1]);
+                System.out.println("The Answer: " + answer[0] + " and " + answer[1]);
                 }
-    
             }
-        }
-
-
-        
+        } 
     }
 }
 

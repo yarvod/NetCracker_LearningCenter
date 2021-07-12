@@ -1,2 +1,0 @@
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {1}Задача 1}{2}%
