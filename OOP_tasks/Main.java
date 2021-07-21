@@ -1,43 +1,25 @@
-import java.util.Arrays;
 
-public class Main {
 
-    class MyArray {
-        double[] array;
-        int count = 0;
+public class Main{
+    public static void main(String[] args) {
+        ArrayVector myArray =  new ArrayVectorImpl();
+        myArray.set(1, -2, 3);
+        // System.out.println(myArray.getMax());
+        // System.out.println(myArray.getNorm());
+        // System.out.println(myArray.getSize());
 
-        void set(double... elements) {
-            for (double el: elements) {
-                this.count++; 
-            }
-            this.array = new double[this.count];
-            for (int i=0; i<this.count; i++) {
-                this.array[i] = elements[i];
-            }
-
+        ArrayVector myArray2 =  new ArrayVectorImpl();
+        myArray2.set(1, 2, 3, 7);
+        myArray.set(7, 4.8);
+        for (int i=0; i < myArray.getSize(); i++) {
+            System.out.println(myArray.get(i));
         }
-
-        double[] get() { 
-            return this.array;
-        }
-
-        MyArray clone() {
-            MyArray myArray = new MyArray();
-            myArray.array = this.array.clone();
-            // System.arrayCopy(this.array, 0, myArray.array, 0, this.count);
-            return myArray;
-        }
-
+        // myArray.sum(myArray2);
+        // for (int i=0; i < myArray.getSize(); i++) {
+        //     System.out.println(myArray.get(i));
+        // }
+        //System.out.println(myArray.scalarMult(myArray2));
+       // System.out.println(myArray.get(4));
 
     }
-
-    public static void main (String[] args) {
-        Main Main_class = new Main();
-        MyArray vector = Main_class.new MyArray();
-
-        vector.set(1,2,3);
-
-        }
-
-    
 }
