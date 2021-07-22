@@ -1,23 +1,42 @@
 package task_3;
 
+import java.util.Objects;
+
 public class ExtendedClass {
     byte b;
     int i;
     double d;
     String s;
 
-    boolean equals(ExtendedClass obj1, ExtendedClass obj2) {
-        
-        boolean answer = true;
-        return answer;
+    @Override
+    public boolean equals(Object anObject) {
+        if (anObject == this) {
+            return true;
+        } else if (anObject == null || anObject.getClass() != this.getClass()) {
+            return false;
+        }
+
+        ExtendedClass extendedClass = (ExtendedClass) anObject;
+        if (this.b == extendedClass.b && this.i  == extendedClass.i && this.d == extendedClass.d && this.s == extendedClass.s) {
+            return true;
+        } 
+        else {
+            return false;
+        }    
     }
 
-    int _hashCode() {
-        return 1;
+    @Override
+    public int hashCode() {
+        int result = Objects.hashCode(b);
+        result = 31 * result + Objects.hashCode(i);
+        result = 31 * result + Objects.hashCode(d);
+        result = 31 * result + Objects.hashCode(s);
+        return result;
     }
 
-    String _toString() {
+    @Override
+    public String toString() {
 
-        return "1";
+        return "byte: "+ b + "\n" + "int: " +"i "+ "\n" + "double: " + d + "\n" + "String: " + s ;
     }
 }
